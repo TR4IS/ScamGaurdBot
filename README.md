@@ -3,7 +3,7 @@
 
 # ScamGuard Bot 🛡️
 
-> Industry-grade Discord bot that automatically detects and removes scam messages and images from any server it joins.
+> Discord bot that automatically detects and removes scam messages and images from any server it joins.
 
 ---
 
