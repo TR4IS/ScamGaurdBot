@@ -47,7 +47,7 @@ npm install
 ### 2. الإعداد
 
 ```bash
-cp .env.example .env
+nano .env
 # افتح ملف .env وعدّل القيم
 ```
 
