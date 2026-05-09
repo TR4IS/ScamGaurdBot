@@ -37,7 +37,7 @@ npm install
 ### 2. Configure
 
 ```bash
-cp .env.example .env
+nano .env
 # Edit .env with your favourite editor
 ```
 
