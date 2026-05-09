@@ -1,0 +1,27 @@
+{
+  "name": "scamguard-bot",
+  "version": "1.0.0",
+  "description": "Industry-grade Discord bot that automatically removes scam messages and images.",
+  "main": "src/index.js",
+  "scripts": {
+    "start":   "node src/index.js",
+    "dev":     "nodemon src/index.js",
+    "lint":    "eslint src/**/*.js",
+    "test":    "jest --coverage"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.0",
+    "dotenv":     "^16.4.5",
+    "jimp":       "^0.22.12"
+  },
+  "devDependencies": {
+    "eslint":  "^9.0.0",
+    "jest":    "^29.7.0",
+    "nodemon": "^3.1.0"
+  },
+  "keywords": ["discord", "bot", "scam", "moderation", "anti-scam"],
+  "license": "MIT"
+}
