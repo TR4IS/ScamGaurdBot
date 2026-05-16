@@ -1,0 +1,58 @@
+# ─────────────────────────────────────────────────────────────
+#  ScamGuard Bot — Environment Configuration
+#  Copy this file to .env and fill in your values.
+#  NEVER commit .env to version control.
+# ─────────────────────────────────────────────────────────────
+
+
+# ── Discord ───────────────────────────────────────────────────
+DISCORD_TOKEN=your_discord_bot_token_here
+
+# Comma-separated channel IDs to skip (e.g. bot-commands)
+IGNORED_CHANNELS=
+
+# Comma-separated role IDs whose members are immune to deletions
+IMMUNE_ROLES=
+
+
+# ── Detection mode ────────────────────────────────────────────
+#   "local" — zero-dependency heuristics (default, no API key needed)
+#   "ai"    — LLM-powered analysis (requires AI_API_KEY below)
+DETECTION_MODE=local
+
+
+# ── AI provider settings (only needed when DETECTION_MODE=ai) ─
+#   Supported providers: openai | anthropic
+AI_PROVIDER=openai
+AI_API_KEY=
+AI_MODEL=gpt-4o-mini
+
+# Confidence threshold [0-1]; messages/images above this are flagged
+AI_THRESHOLD=0.75
+
+
+# ── Local mode settings ───────────────────────────────────────
+# Minimum pixel similarity [0-1] to flag an image as scam
+IMAGE_SIMILARITY_THRESHOLD=0.85
+
+# Minimum heuristic score [0-1] to flag a text message as scam
+TEXT_SCORE_THRESHOLD=0.6
+
+
+# ── Paths ─────────────────────────────────────────────────────
+SCAM_IMAGES_DIR=./scam_images
+LOGS_DIR=./logs
+
+
+# ── Actions ───────────────────────────────────────────────────
+# Delete the scam message automatically
+ACTION_DELETE=true
+
+# Post a warning embed in the channel (auto-deletes after 30s)
+ACTION_SEND_WARNING=true
+
+# Timeout (mute) the offender for N minutes. 0 = disabled.
+ACTION_TIMEOUT_MINUTES=0
+
+# Write structured action logs to console + logs/
+ACTION_LOG=true
