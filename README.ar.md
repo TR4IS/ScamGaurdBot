@@ -55,7 +55,7 @@ npm install
 
 ```
 DISCORD_TOKEN=توكن_البوت_هنا
-DETECTION_MODE=local          # أو "ai"
+DETECTION_MODE=local او ai 
 ```
 
 ### 3. إضافة صور الاحتيال
